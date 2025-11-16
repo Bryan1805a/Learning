@@ -1,9 +1,5 @@
 import numpy as np
 
-arr = np.array([1, 2, 3, 4, 5])
+arr = np.array([[1, 2, 3, 4], [1, 2, 3, 4]])
 
-x = arr.copy()
-y = arr.view()
-
-print(x.base)
-print(y.base)
+print(arr.shape)
