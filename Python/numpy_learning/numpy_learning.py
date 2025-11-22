@@ -1,4 +1,5 @@
 from numpy import random
 
-x = random.normal(size=(2, 3))
+x = random.poisson(lam=2, size=3)
+
 print(x)
