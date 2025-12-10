@@ -38,6 +38,19 @@ clean_data = ad_data.drop(['Social Media'], axis=1)
 
 X = clean_data.iloc[:, :-2]
 y = clean_data['Sales']
-plt.rcParams['figure.figsize'] = (20, 10)
-sns.pairplot(ad_data, hue='Sales')
-plt.show()
+
+TV = ad_data['TV'].to_numpy()
+Radio = ad_data['Radio'].to_numpy()
+Sales = ad_data['Sales'].to_numpy()
+
+x0 = np.ones(len(TV))
+X2 = np.array([TV, Radio]).T
+W = np.array([0, 0])
+Y2 = np.array(Sales)
+
+def cost_function(X, Y, W):
+    m = len(Y)
+    J = np.sum((X.dot(X) - Y) ** 2) / (2 * m)
+    return J
+
+print(cost_function(X2, Y2, W))
