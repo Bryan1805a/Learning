@@ -15,17 +15,11 @@ import sys
 
 def bonAppetit(bill, k, b):
     # Write your code here
-    total = 0
-    n = len(bill)
-    for i in range(n):
-        if i == k:
-            continue
-        
-        total += bill[i]
-    
-    if b - (total / 2) == 0:
+    actual_share = (sum(bill) - bill[k]) // 2
+
+    if b == actual_share:
         print("Bon Appetit")
     else:
-        print(int((abs(b - (total / 2)))))
+        print(b - actual_share)
 
 bonAppetit([3, 10, 2, 9], 1, 12)
