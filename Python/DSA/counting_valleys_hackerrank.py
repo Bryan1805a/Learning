@@ -15,20 +15,17 @@ import sys
 
 def countingValleys(steps, path):
     # Write your code here
-    sea_level = 0
-    previous_level = 0
+    level = 0
     valley_count = 0
 
-    for i in range(steps):
-        if path[i] == 'U':
-            previous_level = sea_level
-            sea_level += 1
-        elif path[i] == 'D':
-            previous_level = sea_level
-            sea_level -= 1
-        
-        if sea_level == 0 and previous_level < 0:
-            valley_count += 1
+    for step in path:
+        if step == 'U':
+            level += 1
+
+            if level == 0:
+                valley_count += 1
+        else:
+            level -= 1
     
     return valley_count
 
