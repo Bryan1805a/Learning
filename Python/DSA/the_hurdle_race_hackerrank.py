@@ -23,4 +23,4 @@ def hurdleRace(k, height):
     
     return total_doses
 
-print(hurdleRace(4, [1, 6, 3, 5, 2]))
+print(hurdleRace(4, [1, 6, 3, 5, 2, 10]))
