@@ -1,4 +1,0 @@
-3
-SV01#Tran Van#Nam#7.6
-SV02#Nguyen Tuan#Anh#8.3
-SV03#Ho Ba#Ngoc#8.0
